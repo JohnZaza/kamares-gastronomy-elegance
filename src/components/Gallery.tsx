@@ -6,19 +6,29 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
-import heroImage from '@/assets/hero-kamares.jpg';
-import receptionHall from '@/assets/reception-hall.jpg';
-import traditionalFood from '@/assets/traditional-food.jpg';
-import outdoorCourtyard from '@/assets/outdoor-courtyard.jpg';
+import venue1 from '@/assets/venue-1.jpg';
+import venue2 from '@/assets/venue-2.jpg';
+import team from '@/assets/team.jpg';
+import venue3 from '@/assets/venue-3.jpg';
+import service from '@/assets/service.jpg';
+import venueWedding from '@/assets/venue-wedding.jpg';
+import venueSign from '@/assets/venue-sign.jpg';
+import team2 from '@/assets/team-2.jpg';
+import venue4 from '@/assets/venue-4.jpg';
 
 const Gallery = () => {
   const { t } = useLanguage();
 
   const images = [
-    { src: heroImage, alt: 'Kamares Venue' },
-    { src: receptionHall, alt: 'Reception Hall' },
-    { src: traditionalFood, alt: 'Traditional Food' },
-    { src: outdoorCourtyard, alt: 'Outdoor Courtyard' },
+    { src: venue1, alt: 'Outdoor Wedding Setup' },
+    { src: venue2, alt: 'Elegant Table Setting' },
+    { src: venue3, alt: 'Outdoor Event Space' },
+    { src: venueWedding, alt: 'Wedding Celebration' },
+    { src: venueSign, alt: 'Kamares Venue' },
+    { src: venue4, alt: 'Evening Reception' },
+    { src: team, alt: 'Professional Team' },
+    { src: team2, alt: 'Our Staff' },
+    { src: service, alt: 'Service Excellence' },
   ];
 
   return (

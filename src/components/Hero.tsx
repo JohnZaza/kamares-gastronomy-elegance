@@ -1,7 +1,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { ChevronDown } from 'lucide-react';
-import heroImage from '@/assets/hero-kamares.jpg';
+import heroImage from '@/assets/venue-wedding.jpg';
 
 const Hero = () => {
   const { t } = useLanguage();

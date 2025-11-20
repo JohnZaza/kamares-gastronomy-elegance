@@ -3,6 +3,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import logo from '@/assets/logo.jpg';
 
 const Navbar = () => {
   const { t } = useLanguage();
@@ -43,9 +44,9 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           <button
             onClick={() => scrollToSection('hero')}
-            className="font-serif text-2xl font-bold text-primary hover:text-accent transition-colors"
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
-            ΚΑΜΑΡΕΣ
+            <img src={logo} alt="ΚΑΜΑΡΕΣ Logo" className="h-12 w-auto" />
           </button>
 
           {/* Desktop Navigation */}

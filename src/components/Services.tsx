@@ -1,9 +1,9 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from '@/components/ui/card';
 import { Calendar, UtensilsCrossed, Truck } from 'lucide-react';
-import receptionHall from '@/assets/reception-hall.jpg';
-import traditionalFood from '@/assets/traditional-food.jpg';
-import outdoorCourtyard from '@/assets/outdoor-courtyard.jpg';
+import venue3 from '@/assets/venue-3.jpg';
+import service from '@/assets/service.jpg';
+import venueSign from '@/assets/venue-sign.jpg';
 
 const Services = () => {
   const { t } = useLanguage();
@@ -13,19 +13,19 @@ const Services = () => {
       icon: Calendar,
       title: t('services.events.title'),
       description: t('services.events.description'),
-      image: receptionHall,
+      image: venue3,
     },
     {
       icon: UtensilsCrossed,
       title: t('services.restaurant.title'),
       description: t('services.restaurant.description'),
-      image: traditionalFood,
+      image: service,
     },
     {
       icon: Truck,
       title: t('services.catering.title'),
       description: t('services.catering.description'),
-      image: outdoorCourtyard,
+      image: venueSign,
     },
   ];
 
