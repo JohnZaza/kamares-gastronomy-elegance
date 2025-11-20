@@ -2,6 +2,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { ChevronDown } from 'lucide-react';
 import heroImage from '@/assets/venue-wedding.jpg';
+import logoFull from '@/assets/logo-full.png';
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -27,13 +28,17 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
-        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground mb-6 animate-fade-in">
-          {t('hero.title')}
-        </h1>
-        <p className="text-xl md:text-2xl lg:text-3xl text-primary-foreground/90 mb-4 animate-fade-in font-light">
+        <div className="mb-8 animate-fade-in flex justify-center">
+          <img 
+            src={logoFull} 
+            alt="Kamares Hall & Catering" 
+            className="w-full max-w-2xl h-auto drop-shadow-2xl"
+          />
+        </div>
+        <p className="text-xl md:text-2xl lg:text-3xl text-primary-foreground/90 mb-4 animate-fade-in font-light drop-shadow-lg">
           {t('hero.subtitle')}
         </p>
-        <p className="text-lg md:text-xl text-primary-foreground/80 mb-12 animate-fade-in font-light">
+        <p className="text-lg md:text-xl text-primary-foreground/80 mb-12 animate-fade-in font-light drop-shadow-md">
           {t('hero.description')}
         </p>
         <Button

@@ -3,7 +3,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import logo from '@/assets/logo.jpg';
+import logoFull from '@/assets/logo-full.png';
 
 const Navbar = () => {
   const { t } = useLanguage();
@@ -37,16 +37,16 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-background/95 backdrop-blur-md shadow-soft' : 'bg-transparent'
+        isScrolled ? 'bg-background/98 backdrop-blur-md shadow-soft' : 'bg-gradient-to-b from-deep-earth/80 to-transparent backdrop-blur-sm'
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <button
             onClick={() => scrollToSection('hero')}
-            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+            className="flex items-center gap-2 hover:opacity-90 transition-opacity"
           >
-            <img src={logo} alt="ΚΑΜΑΡΕΣ Logo" className="h-12 w-auto" />
+            <img src={logoFull} alt="ΚΑΜΑΡΕΣ Logo" className="h-10 w-auto brightness-0 invert" />
           </button>
 
           {/* Desktop Navigation */}
@@ -55,7 +55,7 @@ const Navbar = () => {
               <button
                 key={link.key}
                 onClick={() => scrollToSection(link.id)}
-                className="text-foreground hover:text-accent transition-colors font-medium"
+                className="text-primary-foreground hover:text-accent transition-colors font-semibold text-sm tracking-wide drop-shadow-md"
               >
                 {t(link.key)}
               </button>
@@ -78,12 +78,12 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border bg-background/95 backdrop-blur-md">
+          <div className="md:hidden py-4 border-t border-border/30 bg-background/98 backdrop-blur-md">
             {navLinks.map((link) => (
               <button
                 key={link.key}
                 onClick={() => scrollToSection(link.id)}
-                className="block w-full text-left py-3 text-foreground hover:text-accent transition-colors font-medium"
+                className="block w-full text-left py-3 px-4 text-foreground hover:text-accent transition-colors font-semibold"
               >
                 {t(link.key)}
               </button>
