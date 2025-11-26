@@ -1,8 +1,9 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { ChevronDown } from 'lucide-react';
-import heroImage from '@/assets/venue-wedding.jpg';
+// import heroImage from '@/assets/venue-wedding.jpg';
 import logoFull from '@/assets/logo-full.png';
+import heroImage from '@/assets/testchat.png';
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -29,9 +30,9 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="mb-8 animate-fade-in flex justify-center">
-          <img 
-            src={logoFull} 
-            alt="Kamares Hall & Catering" 
+          <img
+            src={logoFull}
+            alt="Kamares Hall & Catering"
             className="w-full max-w-2xl h-auto drop-shadow-2xl"
           />
         </div>

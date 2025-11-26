@@ -43,16 +43,16 @@ const ContactForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     try {
       contactSchema.parse(formData);
-      
+
       // Success - show toast
       toast({
         title: t('contact.success'),
         description: t('contact.subtitle'),
       });
-      
+
       // Reset form
       setFormData({
         name: '',
@@ -113,16 +113,24 @@ const ContactForm = () => {
                   <h3 className="font-serif text-2xl font-semibold text-primary mb-6">
                     {t('contact.info.title')}
                   </h3>
-                  
+
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
                       <MapPin className="h-5 w-5 text-accent mt-1 flex-shrink-0" />
                       <div>
                         <p className="font-medium text-foreground">{t('contact.info.address')}</p>
-                        <p className="text-sm text-foreground/70">Βλαχέρνα Αρκαδίας, Ελλάδα</p>
+                        <a
+                          href="https://www.google.com/maps/search/?api=1&query=Βλαχέρνα+Αρκαδίας"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-foreground/70 hover:text-accent transition-colors"
+                        >
+                          Βλαχέρνα Αρκαδίας, Ελλάδα
+                        </a>
+
                       </div>
                     </div>
-                    
+
                     <div className="flex items-start gap-3">
                       <Phone className="h-5 w-5 text-accent mt-1 flex-shrink-0" />
                       <div>
@@ -132,7 +140,7 @@ const ContactForm = () => {
                         </a>
                       </div>
                     </div>
-                    
+
                     <div className="flex items-start gap-3">
                       <Smartphone className="h-5 w-5 text-accent mt-1 flex-shrink-0" />
                       <div>
