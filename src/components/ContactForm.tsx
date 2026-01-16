@@ -12,66 +12,98 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Card, CardContent } from '@/components/ui/card';
-import { MapPin, Phone, Smartphone } from 'lucide-react';
+import { MapPin, Phone, Smartphone, CheckCircle2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { z } from 'zod';
+import { Checkbox } from '@/components/ui/checkbox';
 
 const ContactForm = () => {
   const { t } = useLanguage();
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
+    eventDate: '',
     eventType: '',
     guests: '',
     location: '',
     menuType: '',
     message: '',
+    gdpr: false,
   });
 
   const contactSchema = z.object({
     name: z.string().trim().min(1, { message: "Name is required" }).max(100),
     email: z.string().trim().email({ message: "Invalid email" }).max(255),
     phone: z.string().trim().min(1, { message: "Phone is required" }).max(20),
+    eventDate: z.string().min(1, { message: "Date is required" }),
     eventType: z.string().min(1, { message: "Event type is required" }),
     guests: z.string().trim().min(1, { message: "Number of guests is required" }),
     location: z.string().trim().min(1, { message: "Location is required" }).max(200),
     menuType: z.string().min(1, { message: "Menu type is required" }),
     message: z.string().trim().max(1000),
+    gdpr: z.boolean().refine(val => val === true, {
+      message: t('contact.gdpr.error'),
+    }),
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
     try {
       contactSchema.parse(formData);
 
-      // Success - show toast
-      toast({
-        title: t('contact.success'),
-        description: t('contact.subtitle'),
+      const response = await fetch('https://formspree.io/f/mbddlnwr', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData)
       });
 
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        eventType: '',
-        guests: '',
-        location: '',
-        menuType: '',
-        message: '',
-      });
+      if (response.ok) {
+        // Success - show toast
+        toast({
+          title: t('contact.success'),
+          description: t('contact.subtitle'),
+        });
+
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          eventDate: '',
+          eventType: '',
+          guests: '',
+          location: '',
+          menuType: '',
+          message: '',
+          gdpr: false,
+        });
+      } else {
+        throw new Error('Submission failed');
+      }
     } catch (error) {
       if (error instanceof z.ZodError) {
         toast({
-          title: "Σφάλμα",
+          title: t('contact.gdpr.error'),
           description: error.errors[0].message,
           variant: "destructive",
         });
+      } else {
+        toast({
+          title: "Σφάλμα",
+          description: "Παρουσιάστηκε σφάλμα κατά την αποστολή. Παρακαλώ δοκιμάστε ξανά.",
+          variant: "destructive",
+        });
       }
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -197,6 +229,17 @@ const ContactForm = () => {
                       </div>
 
                       <div className="space-y-2">
+                        <Label htmlFor="eventDate">{t('contact.eventDate')}</Label>
+                        <Input
+                          id="eventDate"
+                          type="date"
+                          value={formData.eventDate}
+                          onChange={(e) => setFormData({ ...formData, eventDate: e.target.value })}
+                          required
+                        />
+                      </div>
+
+                      <div className="space-y-2">
                         <Label htmlFor="eventType">{t('contact.eventType')}</Label>
                         <Select
                           value={formData.eventType}
@@ -269,12 +312,34 @@ const ContactForm = () => {
                       />
                     </div>
 
+                    <div className="flex items-start space-x-2 pt-2">
+                      <Checkbox
+                        id="gdpr"
+                        checked={formData.gdpr}
+                        onCheckedChange={(checked) => setFormData({ ...formData, gdpr: checked as boolean })}
+                        className="mt-1"
+                      />
+                      <Label
+                        htmlFor="gdpr"
+                        className="text-sm font-normal leading-relaxed text-foreground/80 cursor-pointer"
+                      >
+                        {t('contact.gdpr')}
+                      </Label>
+                    </div>
+
                     <Button
                       type="submit"
                       size="lg"
                       className="w-full bg-accent hover:bg-accent/90 text-foreground font-semibold"
+                      disabled={isSubmitting}
                     >
-                      {t('contact.submit')}
+                      {isSubmitting ? (
+                        <>
+                          <span className="animate-pulse">Αποστολή...</span>
+                        </>
+                      ) : (
+                        t('contact.submit')
+                      )}
                     </Button>
                   </form>
                 </CardContent>

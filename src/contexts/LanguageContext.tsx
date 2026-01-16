@@ -52,6 +52,7 @@ const translations = {
     'contact.name': 'Ονοματεπώνυμο',
     'contact.email': 'Email',
     'contact.phone': 'Τηλέφωνο',
+    'contact.eventDate': 'Ημερομηνία Εκδήλωσης',
     'contact.eventType': 'Τύπος Εκδήλωσης',
     'contact.eventType.placeholder': 'Επιλέξτε τύπο εκδήλωσης',
     'contact.eventType.wedding': 'Γάμος',
@@ -72,6 +73,8 @@ const translations = {
     'contact.message': 'Επιπλέον Λεπτομέρειες',
     'contact.submit': 'Αποστολή',
     'contact.success': 'Το μήνυμά σας στάλθηκε επιτυχώς!',
+    'contact.gdpr': 'Συμφωνώ με την επεξεργασία των προσωπικών μου δεδομένων για την επικοινωνία σχετικά με την εκδήλωση.',
+    'contact.gdpr.error': 'Πρέπει να συμφωνήσετε με τους όρους για να συνεχίσετε.',
 
     // Contact Info
     'contact.info.title': 'Πληροφορίες Επικοινωνίας',
@@ -127,6 +130,7 @@ const translations = {
     'contact.name': 'Full Name',
     'contact.email': 'Email',
     'contact.phone': 'Phone',
+    'contact.eventDate': 'Event Date',
     'contact.eventType': 'Event Type',
     'contact.eventType.placeholder': 'Select event type',
     'contact.eventType.wedding': 'Wedding',
@@ -147,6 +151,8 @@ const translations = {
     'contact.message': 'Additional Details',
     'contact.submit': 'Submit',
     'contact.success': 'Your message has been sent successfully!',
+    'contact.gdpr': 'I agree to the processing of my personal data for communication regarding the event.',
+    'contact.gdpr.error': 'You must agree to the terms to continue.',
 
     // Contact Info
     'contact.info.title': 'Contact Information',
