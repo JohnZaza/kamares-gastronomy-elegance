@@ -39,12 +39,17 @@ const Hero = () => {
             className="w-full max-w-3xl h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-transform duration-700 hover:scale-105"
           />
         </div>
-        <p className="text-xl md:text-2xl lg:text-3xl text-primary-foreground/90 mb-4 animate-fade-in font-light drop-shadow-lg">
-          {t('hero.subtitle')}
-        </p>
-        <p className="text-lg md:text-xl text-primary-foreground/80 mb-12 animate-fade-in font-light drop-shadow-md">
-          {t('hero.description')}
-        </p>
+        <div className="relative group max-w-4xl mx-auto">
+          {/* Subtle contrast mask for text area */}
+          <div className="absolute inset-0 bg-deep-earth/10 blur-3xl rounded-full scale-150 pointer-events-none" />
+
+          <p className="relative z-10 text-xl md:text-2xl lg:text-3xl text-primary-foreground mb-4 animate-fade-in font-bold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] tracking-wide">
+            {t('hero.subtitle')}
+          </p>
+          <p className="relative z-10 text-lg md:text-xl text-primary-foreground mb-12 animate-fade-in font-medium drop-shadow-[0_1px_3px_rgba(0,0,0,0.7)] max-w-2xl mx-auto leading-relaxed">
+            {t('hero.description')}
+          </p>
+        </div>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in">
           <Button
             size="lg"
