@@ -29,24 +29,29 @@ const Navbar = () => {
   const navLinks = [
     { key: 'nav.home', id: 'hero' },
     { key: 'nav.about', id: 'about' },
-    { key: 'nav.services', id: 'services' },
+    { key: 'nav.restaurant', id: 'restaurant' },
+    { key: 'nav.menu', id: 'menu' },
+    { key: 'nav.catering', id: 'catering' },
     { key: 'nav.gallery', id: 'gallery' },
     { key: 'nav.contact', id: 'contact' },
   ];
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-background/98 backdrop-blur-md shadow-soft' : 'bg-gradient-to-b from-deep-earth/80 to-transparent backdrop-blur-sm'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/95 backdrop-blur-lg shadow-elegant border-b border-border/10' : 'bg-gradient-to-b from-deep-earth/80 to-transparent backdrop-blur-sm'
+        }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className={`flex items-center justify-between transition-all duration-300 ${isScrolled ? 'h-20' : 'h-28'}`}>
           <button
             onClick={() => scrollToSection('hero')}
             className="flex items-center gap-2 hover:opacity-90 transition-opacity"
           >
-            <img src={logoFull} alt="ΚΑΜΑΡΕΣ Logo" className="h-10 w-auto brightness-0 invert" />
+            <img
+              src={logoFull}
+              alt="ΚΑΜΑΡΕΣ Logo"
+              className={`w-auto transition-all duration-300 ${isScrolled ? 'h-12 brightness-100' : 'h-16 brightness-0 invert'}`}
+            />
           </button>
 
           {/* Desktop Navigation */}
@@ -55,7 +60,8 @@ const Navbar = () => {
               <button
                 key={link.key}
                 onClick={() => scrollToSection(link.id)}
-                className="text-primary-foreground hover:text-accent transition-colors font-semibold text-sm tracking-wide drop-shadow-md"
+                className={`transition-colors font-bold text-sm tracking-widest uppercase ${isScrolled ? 'text-primary hover:text-accent' : 'text-primary-foreground hover:text-accent drop-shadow-md'
+                  }`}
               >
                 {t(link.key)}
               </button>

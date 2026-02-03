@@ -29,11 +29,14 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
-        <div className="mb-8 animate-fade-in flex justify-center">
+        <div className="mb-12 animate-fade-in flex justify-center relative group">
+          {/* Subtle "whitening" / glow effect for visibility */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[radial-gradient(circle,rgba(255,255,255,0.05)_0%,transparent_70%)] blur-3xl pointer-events-none" />
+
           <img
             src={logoFull}
             alt="Kamares Hall & Catering"
-            className="w-full max-w-2xl h-auto drop-shadow-2xl"
+            className="w-full max-w-3xl h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-transform duration-700 hover:scale-105"
           />
         </div>
         <p className="text-xl md:text-2xl lg:text-3xl text-primary-foreground/90 mb-4 animate-fade-in font-light drop-shadow-lg">
@@ -42,13 +45,23 @@ const Hero = () => {
         <p className="text-lg md:text-xl text-primary-foreground/80 mb-12 animate-fade-in font-light drop-shadow-md">
           {t('hero.description')}
         </p>
-        <Button
-          size="lg"
-          onClick={scrollToContact}
-          className="bg-accent hover:bg-accent/90 text-foreground font-semibold px-8 py-6 text-lg shadow-elegant animate-fade-in"
-        >
-          {t('hero.cta')}
-        </Button>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in">
+          <Button
+            size="lg"
+            onClick={() => document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-accent hover:bg-accent/90 text-foreground font-semibold px-8 py-6 text-lg shadow-elegant w-full sm:w-auto"
+          >
+            {t('hero.cta.restaurant')}
+          </Button>
+          <Button
+            size="lg"
+            onClick={() => document.getElementById('catering')?.scrollIntoView({ behavior: 'smooth' })}
+            variant="outline"
+            className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 text-white font-semibold px-8 py-6 text-lg shadow-elegant w-full sm:w-auto"
+          >
+            {t('hero.cta.catering')}
+          </Button>
+        </div>
       </div>
 
       {/* Scroll Indicator */}

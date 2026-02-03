@@ -108,12 +108,11 @@ const ContactForm = () => {
   };
 
   const eventTypes = [
+    'contact.eventType.restaurant',
     'contact.eventType.wedding',
     'contact.eventType.baptism',
-    'contact.eventType.birthday',
-    'contact.eventType.ceremony',
-    'contact.eventType.fingerFood',
     'contact.eventType.corporate',
+    'contact.eventType.catering',
     'contact.eventType.other',
   ];
 
@@ -266,39 +265,8 @@ const ContactForm = () => {
                           min="1"
                           value={formData.guests}
                           onChange={(e) => setFormData({ ...formData, guests: e.target.value })}
-                          required
                         />
                       </div>
-
-                      <div className="space-y-2">
-                        <Label htmlFor="menuType">{t('contact.menuType')}</Label>
-                        <Select
-                          value={formData.menuType}
-                          onValueChange={(value) => setFormData({ ...formData, menuType: value })}
-                        >
-                          <SelectTrigger id="menuType">
-                            <SelectValue placeholder={t('contact.menuType.placeholder')} />
-                          </SelectTrigger>
-                          <SelectContent className="bg-popover z-50">
-                            {menuTypes.map((type) => (
-                              <SelectItem key={type} value={type}>
-                                {t(type)}
-                              </SelectItem>
-                            ))}
-                          </SelectContent>
-                        </Select>
-                      </div>
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="location">{t('contact.location')}</Label>
-                      <Input
-                        id="location"
-                        value={formData.location}
-                        onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-                        required
-                        maxLength={200}
-                      />
                     </div>
 
                     <div className="space-y-2">
