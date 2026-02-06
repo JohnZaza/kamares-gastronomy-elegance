@@ -151,7 +151,7 @@ const ContactForm = () => {
                       <div>
                         <p className="font-medium text-foreground">{t('contact.info.address')}</p>
                         <a
-                          href="https://www.google.com/maps/search/?api=1&query=Βλαχέρνα+Αρκαδίας"
+                          href="https://www.google.com/maps/place/%CE%9A%CE%B1%CE%BC%CE%AC%CF%81%CE%B5%CF%82+Hall+-+%CE%95%CF%83%CF%84%CE%B9%CE%B1%CF%84%CF%8C%CF%81%CE%B9%CE%BF+-+Catering/@37.7190296,22.2503561,17z/data=!4m15!1m8!3m7!1s0x13600defa14064a9:0xfec654f569d0d006!2zzprOsc68zqzPgc61z4IgSGFsbCAtIM6Vz4PPhM65zrHPhM-Mz4HOuc6_IC0gQ2F0ZXJpbmc!8m2!3d37.718998!4d22.2504687!10e5!16s%2Fg%2F11fln2299m!3m5!1s0x13600defa14064a9:0xfec654f569d0d006!8m2!3d37.718998!4d22.2504687!16s%2Fg%2F11fln2299m?entry=ttu&g_ep=EgoyMDI2MDIwMy4wIKXMDSoASAFQAw%3D%3D"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-sm text-foreground/70 hover:text-accent transition-colors"
