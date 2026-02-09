@@ -145,40 +145,55 @@ const ContactForm = () => {
                     {t('contact.info.title')}
                   </h3>
 
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <MapPin className="h-5 w-5 text-accent mt-1 flex-shrink-0" />
-                      <div>
-                        <p className="font-medium text-foreground">{t('contact.info.address')}</p>
+                  <div className="space-y-8">
+                    {/* Address */}
+                    <div className="flex items-start gap-4 group animate-fade-in" style={{ animationDelay: '100ms' }}>
+                      <div className="bg-accent/10 p-2.5 rounded-lg group-hover:bg-accent/20 transition-all duration-300">
+                        <MapPin className="h-5 w-5 text-accent" />
+                      </div>
+                      <div className="space-y-1">
+                        <p className="font-semibold text-foreground tracking-tight">{t('contact.info.address')}</p>
                         <a
                           href="https://www.google.com/maps/place/%CE%9A%CE%B1%CE%BC%CE%AC%CF%81%CE%B5%CF%82+Hall+-+%CE%95%CF%83%CF%84%CE%B9%CE%B1%CF%84%CF%8C%CF%81%CE%B9%CE%BF+-+Catering/@37.7190296,22.2503561,17z/data=!4m15!1m8!3m7!1s0x13600defa14064a9:0xfec654f569d0d006!2zzprOsc68zqzPgc61z4IgSGFsbCAtIM6Vz4PPhM65zrHPhM-Mz4HOuc6_IC0gQ2F0ZXJpbmc!8m2!3d37.718998!4d22.2504687!10e5!16s%2Fg%2F11fln2299m!3m5!1s0x13600defa14064a9:0xfec654f569d0d006!8m2!3d37.718998!4d22.2504687!16s%2Fg%2F11fln2299m?entry=ttu&g_ep=EgoyMDI2MDIwMy4wIKXMDSoASAFQAw%3D%3D"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-sm text-foreground/70 hover:text-accent transition-colors"
+                          className="text-sm text-foreground/70 hover:text-accent transition-colors block leading-relaxed"
                         >
                           Βλαχέρνα Αρκαδίας, Ελλάδα
                         </a>
-
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-3">
-                      <Phone className="h-5 w-5 text-accent mt-1 flex-shrink-0" />
-                      <div>
-                        <p className="font-medium text-foreground">{t('contact.info.phone')}</p>
-                        <a href="tel:2796051386" className="text-sm text-foreground/70 hover:text-accent transition-colors">
+                    {/* Fixed Phone */}
+                    <div className="flex items-start gap-4 group animate-fade-in" style={{ animationDelay: '200ms' }}>
+                      <div className="bg-accent/10 p-2.5 rounded-lg group-hover:bg-accent/20 transition-all duration-300">
+                        <Phone className="h-5 w-5 text-accent" />
+                      </div>
+                      <div className="space-y-1">
+                        <p className="font-semibold text-foreground tracking-tight">{t('contact.info.phone')}</p>
+                        <a href="tel:2796051386" className="text-sm text-foreground/70 hover:text-accent transition-colors block">
                           27960 51386
                         </a>
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-3">
-                      <Smartphone className="h-5 w-5 text-accent mt-1 flex-shrink-0" />
-                      <div>
-                        <p className="font-medium text-foreground">{t('contact.info.mobile')}</p>
-                        <a href="tel:6972260829" className="text-sm text-foreground/70 hover:text-accent transition-colors">
-                          6972 260829
-                        </a>
+                    {/* Mobile Phones */}
+                    <div className="flex items-start gap-4 group animate-fade-in" style={{ animationDelay: '300ms' }}>
+                      <div className="bg-accent/10 p-2.5 rounded-lg group-hover:bg-accent/20 transition-all duration-300">
+                        <Smartphone className="h-5 w-5 text-accent" />
+                      </div>
+                      <div className="space-y-1">
+                        <p className="font-semibold text-foreground tracking-tight">{t('contact.info.mobile')}</p>
+                        <div className="flex flex-col gap-2">
+                          <a href="tel:6972260829" className="text-sm text-foreground/70 hover:text-accent transition-all duration-300 hover:translate-x-1 flex items-center gap-2">
+                            <span className="w-1 h-1 bg-accent/40 rounded-full" />
+                            6972 260829
+                          </a>
+                          <a href="tel:6977771383" className="text-sm text-foreground/70 hover:text-accent transition-all duration-300 hover:translate-x-1 flex items-center gap-2">
+                            <span className="w-1 h-1 bg-accent/40 rounded-full" />
+                            6977 771383
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
