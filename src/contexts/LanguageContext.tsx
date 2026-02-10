@@ -34,39 +34,69 @@ const translations = {
 
     // Menu Section
     'menu.title': 'Το Μενού Μας',
-    'menu.starters': 'Ορεκτικά',
-    'menu.mains': 'Κυρίως Πιάτα',
-    'menu.desserts': 'Επιδόρπια',
-    'menu.drinks': 'Ποτά',
-    'menu.price.from': 'Από',
+    'menu.cheeses': 'Τυριά',
+    'menu.appetizers': 'Ορεκτικά',
+    'menu.grill': 'Της Ώρας',
+    'menu.bread_water': 'Ψωμί & Νερό',
+    'menu.salads': 'Σαλάτες',
+    'menu.soft_drinks': 'Αναψυκτικά',
+    'menu.beers': 'Μπύρες',
+    'menu.wine': 'Κρασί Χύμα',
+    'menu.spirits': 'Τσίπουρο & Ούζο',
 
-    // Menu Items - Starters
-    'menu.item.salad.name': 'Παραδοσιακή Σαλάτα',
-    'menu.item.salad.desc': 'Φρέσκια ντομάτα, αγγούρι, φέτα και ελιές.',
-    'menu.item.halloumi.name': 'Χαλούμι Σχάρας',
-    'menu.item.halloumi.desc': 'Κυπριακό τυρί στη σχάρα με λεμόνι και μυρωδικά.',
+    // Menu Items - Cheeses
+    'menu.item.feta.name': 'Φέτα',
+    'menu.item.graviera.name': 'Γραβιέρα',
+    'menu.item.saganaki.name': 'Σαγανάκι',
+
+    // Menu Items - Appetizers
     'menu.item.tzatziki.name': 'Τζατζίκι',
-    'menu.item.tzatziki.desc': 'Παραδοσιακό τζατζίκι με γιαούρτι, αγγούρι και σκόρδο.',
+    'menu.item.tirokafteri.name': 'Τυροκαυτερή',
+    'menu.item.fries.name': 'Πατάτες Τηγανιτές',
+    'menu.item.cheesepies.name': 'Τυροπιτάκια με Μέλι',
+    'menu.item.imam.name': 'Μελιτζάνες Ιμάμ',
 
-    // Menu Items - Mains
-    'menu.item.lamb.name': 'Αρκαδικό Αρνάκι',
-    'menu.item.lamb.desc': 'Αρνάκι σιγομαγειρεμένο με μυρωδικά και πατάτες φούρνου.',
-    'menu.item.mousaka.name': 'Μουσακάς',
-    'menu.item.mousaka.desc': 'Στρώσεις από μελιτζάνες, κιμά και κρέμα μπεσαμέλ.',
-    'menu.item.chicken.name': 'Κοτόπουλο Σχάρας',
-    'menu.item.chicken.desc': 'Μαριναρισμένο στήθος κοτόπουλου με λαχανικά εποχής.',
+    // Menu Items - Grill
+    'menu.item.porkchops.name': 'Χοιρινές Μπριζόλες',
+    'menu.item.sausage.name': 'Λουκάνικο Χωριάτικο',
+    'menu.item.bifteki.name': 'Μπιφτέκι στη Σχάρα',
+    'menu.item.biftekig_gst.name': 'Μπιφτέκι Γεμιστό',
+    'menu.item.pansetes.name': 'Πανσέτες Χοιρινές Μερίδα',
+    'menu.item.psaronefri.name': 'Ψαρονέφρι',
+    'menu.item.chicken_fillet.name': 'Κοτόπουλο Φιλέτο',
+    'menu.item.veal.name': 'Μοσχαρίσια Γάλακτος',
+    'menu.item.lambchops.name': 'Παϊδάκια (Κιλό)',
 
-    // Menu Items - Desserts
-    'menu.item.baklava.name': 'Μπακλαβάς',
-    'menu.item.baklava.desc': 'Παραδοσιακός μπακλαβάς με ξηρούς καρπούς και σιρόπι.',
-    'menu.item.yogurt.name': 'Γιαούρτι με Μέλι',
-    'menu.item.yogurt.desc': 'Παραδοσιακό γιαούρτι με μέλι και καρύδια.',
+    // Menu Items - Bread & Water
+    'menu.item.bread.name': 'Ψωμί',
+    'menu.item.water.name': 'Νερό 1.5 LT',
 
-    // Menu Items - Drinks
-    'menu.item.wine.name': 'Τοπικό Κόκκινο Κρασί',
-    'menu.item.wine.desc': 'Ποτήρι από εκλεκτό τοπικό κρασί.',
-    'menu.item.coffee.name': 'Ελληνικός Καφές',
-    'menu.item.coffee.desc': 'Παραδοσιακός ελληνικός καφές στη χόβολη.',
+    // Menu Items - Salads
+    'menu.item.cabbage.name': 'Λάχανο',
+    'menu.item.lettuce.name': 'Μαρούλι',
+    'menu.item.greek_salad.name': 'Χωριάτική',
+    'menu.item.caesar.name': 'Καισάρα',
+    'menu.item.veggie_feast.name': 'Πανδαισία Λαχανικών',
+
+    // Menu Items - Soft Drinks
+    'menu.item.soft_drinks.name': 'Αναψυκτικά',
+
+    // Menu Items - Beers
+    'menu.item.alfa.name': 'Άλφα',
+    'menu.item.amstel.name': 'Amstel',
+    'menu.item.mamos.name': 'Mamos',
+    'menu.item.heineken.name': 'Heineken',
+    'menu.item.kaizer.name': 'Kaizer',
+
+    // Menu Items - Wine
+    'menu.item.wine_rose_half.name': 'Μισό Κιλό Ροζέ',
+    'menu.item.wine_rose_750.name': '750ml Ροζέ',
+    'menu.item.wine_white_half.name': 'Μισό Κιλό Λευκό',
+    'menu.item.wine_white_750.name': '750ml Λευκό',
+
+    // Menu Items - Spirits
+    'menu.item.tsipouro_200.name': 'Τσίπουρο 200ml',
+    'menu.item.ouzo_200.name': 'Ούζο 200ml',
 
     // Catering Section
     'catering.title': 'Catering & Εκδηλώσεις',
@@ -144,39 +174,69 @@ const translations = {
 
     // Menu Section
     'menu.title': 'Our Menu',
-    'menu.starters': 'Starters',
-    'menu.mains': 'Main Courses',
-    'menu.desserts': 'Desserts',
-    'menu.drinks': 'Drinks',
-    'menu.price.from': 'From',
+    'menu.cheeses': 'Cheeses',
+    'menu.appetizers': 'Appetizers',
+    'menu.grill': 'Grill Specialties',
+    'menu.bread_water': 'Bread & Water',
+    'menu.salads': 'Salads',
+    'menu.soft_drinks': 'Soft Drinks',
+    'menu.beers': 'Beers',
+    'menu.wine': 'House Wine',
+    'menu.spirits': 'Spirits',
 
-    // Menu Items - Starters
-    'menu.item.salad.name': 'Traditional Salad',
-    'menu.item.salad.desc': 'Fresh tomatoes, cucumbers, feta cheese, and olives.',
-    'menu.item.halloumi.name': 'Grilled Halloumi',
-    'menu.item.halloumi.desc': 'Cypriot cheese served with lemon and herbs.',
+    // Menu Items - Cheeses
+    'menu.item.feta.name': 'Feta Cheese',
+    'menu.item.graviera.name': 'Graviera Cheese',
+    'menu.item.saganaki.name': 'Saganaki (Fried Cheese)',
+
+    // Menu Items - Appetizers
     'menu.item.tzatziki.name': 'Tzatziki',
-    'menu.item.tzatziki.desc': 'Yogurt, cucumber, and garlic dip.',
+    'menu.item.tirokafteri.name': 'Spicy Feta Dip (Tirokafteri)',
+    'menu.item.fries.name': 'Fresh French Fries',
+    'menu.item.cheesepies.name': 'Small Cheese Pies with Honey',
+    'menu.item.imam.name': 'Imam Eggplants',
 
-    // Menu Items - Mains
-    'menu.item.lamb.name': 'Arcadian Lamb',
-    'menu.item.lamb.desc': 'Slow-cooked lamb with herbs and lemon-roasted potatoes.',
-    'menu.item.mousaka.name': 'Mousaka',
-    'menu.item.mousaka.desc': 'Layers of eggplant, minced meat, and bechamel sauce.',
-    'menu.item.chicken.name': 'Grilled Chicken',
-    'menu.item.chicken.desc': 'Marinated chicken breast served with seasonal vegetables.',
+    // Menu Items - Grill
+    'menu.item.porkchops.name': 'Pork Chops',
+    'menu.item.sausage.name': 'Traditional Village Sausage',
+    'menu.item.bifteki.name': 'Grilled Ground Beef Burger',
+    'menu.item.biftekig_gst.name': 'Stuffed Burger',
+    'menu.item.pansetes.name': 'Pork Belly Portion',
+    'menu.item.psaronefri.name': 'Pork Tenderloin',
+    'menu.item.chicken_fillet.name': 'Chicken Fillet',
+    'menu.item.veal.name': 'Veal Chop',
+    'menu.item.lambchops.name': 'Lamb Chops (per kg)',
 
-    // Menu Items - Desserts
-    'menu.item.baklava.name': 'Baklava',
-    'menu.item.baklava.desc': 'Layers of filo pastry filled with nuts and syrup.',
-    'menu.item.yogurt.name': 'Greek Yogurt',
-    'menu.item.yogurt.desc': 'Served with honey and walnuts.',
+    // Menu Items - Bread & Water
+    'menu.item.bread.name': 'Bread',
+    'menu.item.water.name': 'Mineral Water 1.5 LT',
 
-    // Menu Items - Drinks
-    'menu.item.wine.name': 'Local Red Wine',
-    'menu.item.wine.desc': 'Glass of premium local wine.',
-    'menu.item.coffee.name': 'Greek Coffee',
-    'menu.item.coffee.desc': 'Traditionally brewed.',
+    // Menu Items - Salads
+    'menu.item.cabbage.name': 'Cabbage Salad',
+    'menu.item.lettuce.name': 'Lettuce Salad',
+    'menu.item.greek_salad.name': 'Greek Salad',
+    'menu.item.caesar.name': "Caesar's Salad",
+    'menu.item.veggie_feast.name': 'Vegetable Feast',
+
+    // Menu Items - Soft Drinks
+    'menu.item.soft_drinks.name': 'Soft Drinks 330ml',
+
+    // Menu Items - Beers
+    'menu.item.alfa.name': 'Alfa Beer',
+    'menu.item.amstel.name': 'Amstel Beer',
+    'menu.item.mamos.name': 'Mamos Beer',
+    'menu.item.heineken.name': 'Heineken Beer',
+    'menu.item.kaizer.name': 'Kaizer Beer',
+
+    // Menu Items - Wine
+    'menu.item.wine_rose_half.name': 'Rosé Wine 500ml',
+    'menu.item.wine_rose_750.name': 'Rosé Wine 750ml',
+    'menu.item.wine_white_half.name': 'White Wine 500ml',
+    'menu.item.wine_white_750.name': 'White Wine 750ml',
+
+    // Menu Items - Spirits
+    'menu.item.tsipouro_200.name': 'Tsipouro 200ml',
+    'menu.item.ouzo_200.name': 'Ouzo 200ml',
 
     // Catering Section
     'catering.title': 'Catering & Events',
