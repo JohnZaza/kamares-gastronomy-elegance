@@ -1,131 +1,127 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import {
+    Utensils,
+    Wine,
+    Beer,
+    GlassWater,
+    Beef,
+    Salad as SaladIcon,
+    ChefHat,
+    Milk
+} from 'lucide-react';
 
 const Menu = () => {
     const { t } = useLanguage();
 
     const menuCategories = [
         {
-            id: 'cheeses',
-            title: t('menu.cheeses'),
-            items: [
-                { name: t('menu.item.feta.name'), price: '4.00' },
-                { name: t('menu.item.graviera.name'), price: '5.00' },
-                { name: t('menu.item.saganaki.name'), price: '6.00' },
-            ],
-        },
-        {
-            id: 'appetizers',
-            title: t('menu.appetizers'),
-            items: [
-                { name: t('menu.item.tzatziki.name'), price: '3.50' },
-                { name: t('menu.item.tirokafteri.name'), price: '3.50' },
-                { name: t('menu.item.fries.name'), price: '4.00' },
-                { name: t('menu.item.cheesepies.name'), price: '6.00' },
-                { name: t('menu.item.imam.name'), price: '7.00' },
-            ],
-        },
-        {
-            id: 'salads',
-            title: t('menu.salads'),
-            items: [
-                { name: t('menu.item.cabbage.name'), price: '5.00' },
-                { name: t('menu.item.lettuce.name'), price: '5.00' },
-                { name: t('menu.item.greek_salad.name'), price: '8.00' },
-                { name: t('menu.item.caesar.name'), price: '8.00' },
-                { name: t('menu.item.veggie_feast.name'), price: '8.00' },
-            ],
-        },
-        {
             id: 'grill',
             title: t('menu.grill'),
+            icon: <Beef className="w-5 h-5" />,
             items: [
-                { name: t('menu.item.porkchops.name'), price: '10.00' },
-                { name: t('menu.item.sausage.name'), price: '9.00' },
-                { name: t('menu.item.bifteki.name'), price: '10.00' },
-                { name: t('menu.item.biftekig_gst.name'), price: '11.00' },
-                { name: t('menu.item.pansetes.name'), price: '10.00' },
-                { name: t('menu.item.psaronefri.name'), price: '12.00' },
-                { name: t('menu.item.chicken_fillet.name'), price: '10.00' },
-                { name: t('menu.item.veal.name'), price: '16.00' },
-                { name: t('menu.item.lambchops.name'), price: '35.00' },
+                { name: t('menu.item.porkchops.name') },
+                { name: t('menu.item.sausage.name') },
+                { name: t('menu.item.bifteki.name') },
+                { name: t('menu.item.biftekig_gst.name') },
+                { name: t('menu.item.pansetes.name') },
+                { name: t('menu.item.psaronefri.name') },
+                { name: t('menu.item.chicken_fillet.name') },
+                { name: t('menu.item.veal.name') },
+                { name: t('menu.item.lambchops.name') },
             ],
         },
         {
-            id: 'drinks',
-            title: t('menu.soft_drinks'),
+            id: 'starters_salads',
+            title: t('menu.starters_salads'),
+            icon: <SaladIcon className="w-5 h-5" />,
             items: [
-                { name: t('menu.item.soft_drinks.name'), price: '2.50' },
-                { name: t('menu.item.bread.name'), price: '0.50' },
-                { name: t('menu.item.water.name'), price: '1.50' },
+                { name: t('menu.item.greek_salad.name') },
+                { name: t('menu.item.tzatziki.name') },
+                { name: t('menu.item.tirokafteri.name') },
+                { name: t('menu.item.feta.name') },
+                { name: t('menu.item.graviera.name') },
+                { name: t('menu.item.saganaki.name') },
+                { name: t('menu.item.fries.name') },
+                { name: t('menu.item.cheesepies.name') },
+                { name: t('menu.item.imam.name') },
+                { name: t('menu.item.cabbage.name') },
+                { name: t('menu.item.lettuce.name') },
+                { name: t('menu.item.caesar.name') },
+                { name: t('menu.item.veggie_feast.name') },
             ],
         },
         {
-            id: 'beers',
-            title: t('menu.beers'),
+            id: 'drinks_spirits',
+            title: t('menu.drinks_spirits'),
+            icon: <GlassWater className="w-5 h-5" />,
             items: [
-                { name: t('menu.item.alfa.name'), price: '4.00' },
-                { name: t('menu.item.amstel.name'), price: '4.00' },
-                { name: t('menu.item.mamos.name'), price: '4.00' },
-                { name: t('menu.item.heineken.name'), price: '5.00' },
-                { name: t('menu.item.kaizer.name'), price: '5.00' },
-            ],
-        },
-        {
-            id: 'wine',
-            title: t('menu.wine'),
-            items: [
-                { name: t('menu.item.wine_rose_half.name'), price: '3.50' },
-                { name: t('menu.item.wine_rose_750.name'), price: '6.00' },
-                { name: t('menu.item.wine_white_half.name'), price: '3.50' },
-                { name: t('menu.item.wine_white_750.name'), price: '6.00' },
-            ],
-        },
-        {
-            id: 'spirits',
-            title: t('menu.spirits'),
-            items: [
-                { name: t('menu.item.tsipouro_200.name'), price: '8.50' },
-                { name: t('menu.item.ouzo_200.name'), price: '7.50' },
+                { name: t('menu.item.soft_drinks.name') },
+                { name: t('menu.item.bread.name') },
+                { name: t('menu.item.water.name') },
+                { name: t('menu.item.alfa.name') },
+                { name: t('menu.item.amstel.name') },
+                { name: t('menu.item.mamos.name') },
+                { name: t('menu.item.heineken.name') },
+                { name: t('menu.item.kaizer.name') },
+                { name: t('menu.item.wine_rose_half.name') },
+                { name: t('menu.item.wine_rose_750.name') },
+                { name: t('menu.item.wine_white_half.name') },
+                { name: t('menu.item.wine_white_750.name') },
+                { name: t('menu.item.tsipouro_200.name') },
+                { name: t('menu.item.ouzo_200.name') },
             ],
         },
     ];
 
     return (
-        <section id="menu" className="py-24 bg-card/10">
-            <div className="container mx-auto px-4">
+        <section id="menu" className="py-24 bg-card/10 relative overflow-hidden">
+            {/* Background Decorations */}
+            <div className="absolute top-0 left-0 w-64 h-64 bg-primary/5 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl" />
+            <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full translate-x-1/3 translate-y-1/3 blur-3xl" />
+
+            <div className="container mx-auto px-4 relative z-10">
                 <div className="text-center mb-16 animate-fade-in">
-                    <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-4">
+                    <span className="text-accent font-serif italic text-lg mb-2 block tracking-wider uppercase">
+                        {t('restaurant.subtitle')}
+                    </span>
+                    <h2 className="font-serif text-5xl md:text-6xl font-bold text-primary mb-6">
                         {t('menu.title')}
                     </h2>
-                    <div className="w-24 h-1 bg-accent mx-auto rounded-full" />
+                    <div className="flex items-center justify-center gap-4">
+                        <div className="w-12 h-px bg-accent/30" />
+                        <Utensils className="w-6 h-6 text-accent animate-pulse" />
+                        <div className="w-12 h-px bg-accent/30" />
+                    </div>
                 </div>
 
-                <Tabs defaultValue="cheeses" className="w-full max-w-4xl mx-auto">
-                    <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 mb-12 bg-background shadow-elegant">
+                <Tabs defaultValue="grill" className="w-full max-w-5xl mx-auto">
+                    <TabsList className="flex flex-wrap h-auto gap-2 p-2 mb-12 bg-background/50 backdrop-blur-sm shadow-elegant rounded-xl border border-border/50 justify-center">
                         {menuCategories.map((category) => (
                             <TabsTrigger
                                 key={category.id}
                                 value={category.id}
-                                className="font-serif text-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+                                className="flex-1 min-w-[150px] gap-2 py-3 px-4 font-serif text-base transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground rounded-lg"
                             >
+                                {category.icon}
                                 {category.title}
                             </TabsTrigger>
                         ))}
                     </TabsList>
 
                     {menuCategories.map((category) => (
-                        <TabsContent key={category.id} value={category.id} className="animate-fade-in">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <TabsContent key={category.id} value={category.id} className="animate-fade-in outline-none">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
                                 {category.items.map((item, index) => (
-                                    <div key={index} className="flex justify-between items-start border-b border-border/50 pb-4">
-                                        <div className="space-y-1">
-                                            <h4 className="text-xl font-semibold text-primary">{item.name}</h4>
+                                    <div
+                                        key={index}
+                                        className="group relative flex items-center gap-3 py-2 px-1 transition-all duration-300 hover:scale-[1.01]"
+                                    >
+                                        <div className="flex-none">
+                                            <h4 className="text-xl font-serif font-semibold text-primary/90 group-hover:text-primary transition-colors">
+                                                {item.name}
+                                            </h4>
                                         </div>
-                                        <span className="text-lg font-serif font-bold text-accent">
-                                            €{item.price}
-                                        </span>
                                     </div>
                                 ))}
                             </div>

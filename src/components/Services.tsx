@@ -1,7 +1,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Utensils, Calendar, ArrowRight } from 'lucide-react';
-import traditionalFood from '@/assets/traditional-food.jpg';
+import traditionalFood from '@/assets/greek-salad-lamb-chops.png';
 import venueWedding from '@/assets/venue-wedding.jpg';
 
 const Services = () => {

@@ -36,13 +36,9 @@ const translations = {
     'menu.title': 'Το Μενού Μας',
     'menu.cheeses': 'Τυριά',
     'menu.appetizers': 'Ορεκτικά',
-    'menu.grill': 'Της Ώρας',
-    'menu.bread_water': 'Ψωμί & Νερό',
-    'menu.salads': 'Σαλάτες',
-    'menu.soft_drinks': 'Αναψυκτικά',
-    'menu.beers': 'Μπύρες',
-    'menu.wine': 'Κρασί Χύμα',
-    'menu.spirits': 'Τσίπουρο & Ούζο',
+    'menu.grill': 'Κρεατικά & Ψητά',
+    'menu.starters_salads': 'Σαλάτες & Ορεκτικά',
+    'menu.drinks_spirits': 'Ποτά & Αναψυκτικά',
 
     // Menu Items - Cheeses
     'menu.item.feta.name': 'Φέτα',
@@ -176,13 +172,9 @@ const translations = {
     'menu.title': 'Our Menu',
     'menu.cheeses': 'Cheeses',
     'menu.appetizers': 'Appetizers',
-    'menu.grill': 'Grill Specialties',
-    'menu.bread_water': 'Bread & Water',
-    'menu.salads': 'Salads',
-    'menu.soft_drinks': 'Soft Drinks',
-    'menu.beers': 'Beers',
-    'menu.wine': 'House Wine',
-    'menu.spirits': 'Spirits',
+    'menu.grill': 'Meats & Traditional Grill',
+    'menu.starters_salads': 'Salads & Starters',
+    'menu.drinks_spirits': 'Drinks & Spirits',
 
     // Menu Items - Cheeses
     'menu.item.feta.name': 'Feta Cheese',
